@@ -26,8 +26,11 @@ fn main() -> std::io::Result<()> {
 }
 
 fn open_base64 (input : &str) {
+    // converst input to ascii
     let input = convert_to_ascii(input);
+    // print out for debug
     println!("{:?}", input);
+    // system open call unused result
     let _ = open::that(input);
 }
 
